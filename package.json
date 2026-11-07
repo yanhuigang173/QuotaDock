@@ -1,0 +1,38 @@
+{
+  "name": "quotadock",
+  "version": "0.4.0",
+  "description": "QuotaDock / Windows desktop widget for monitoring local Codex usage quota and usage pace.",
+  "author": "QuotaDock Contributors",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yanhuigang173/QuotaDock.git"
+  },
+  "homepage": "https://github.com/yanhuigang173/QuotaDock#readme",
+  "bugs": {
+    "url": "https://github.com/yanhuigang173/QuotaDock/issues"
+  },
+  "keywords": [
+    "codex",
+    "codex-quota",
+    "codex-usage",
+    "quota-widget",
+    "desktop-widget",
+    "rust",
+    "windows-native",
+    "codex额度",
+    "codex额度小组件",
+    "codex额度悬浮球",
+    "codex用量"
+  ],
+  "scripts": {
+    "dev": "cargo run --manifest-path src-native/Cargo.toml",
+    "start": "cargo run --manifest-path src-native/Cargo.toml --release",
+    "test:pace": "node scripts/verify-pace-advice.js",
+    "test:quota-store": "node scripts/verify-quota-store.js",
+    "test": "npm run test:pace && npm run test:quota-store",
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1"
+  },
+  "devDependencies": {}
+}
